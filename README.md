@@ -1,5 +1,5 @@
 ## What is Ryan store❓ 
-- **Ryan - Store**  is a Full-Stack application built personally with  Spring Boot and thymeleaf that allows users to add books users want to buy and purchase.
+- **Ryan - Store**  is a Back-end application built personally with  Spring Boot and thymeleaf that allows users to add books users want to buy and purchase.
 
 ## Features
 - I used for ManyToMany in this project. But this is not good at Real Project. That is for practice.
