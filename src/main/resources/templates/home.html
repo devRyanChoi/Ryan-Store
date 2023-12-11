@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Welcome to my Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div class="container">
+
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+    <div class="jumbotron">
+        <h1>Welcome to Ryan store</h1>
+        <p class="lead">Member Feature</p>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/members/new">Sign Up</a>
+            <a class="btn btn-lg btn-secondary" href="/members">Member List</a>
+        </p>
+        <p class="lead">Product Feature</p>
+        <p>
+            <a class="btn btn-lg btn-dark" href="/items/new">Register item</a>
+            <a class="btn btn-lg btn-dark" href="/items">Item List</a>
+        </p>
+        <p class="lead">Order Feature</p>
+        <p>
+            <a class="btn btn-lg btn-info" href="/order">Order</a>
+            <a class="btn btn-lg btn-info" href="/orders">Order List</a>
+        </p>
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
+
+</div> <!-- /container -->
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+
+    <form th:object="${form}" method="post">
+        <!-- id -->
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="form-group">
+            <label th:for="name">Item Name</label>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="Enter the name" />
+        </div>
+        <div class="form-group">
+            <label th:for="price">Price</label>
+            <input type="number" th:field="*{price}" class="form-control" placeholder="Enter the price" />
+        </div>
+        <div class="form-group">
+            <label th:for="stockQuantity">Quantity</label>
+            <input type="number" th:field="*{stockQuantity}" class="form-control" placeholder="Enter the quantity" />
+        </div>
+        <div class="form-group">
+            <label th:for="author">Author</label>
+            <input type="text" th:field="*{author}" class="form-control"  placeholder="Enter the quthor" />
+        </div>
+        <div class="form-group">
+            <label th:for="isbn">ISBN</label>
+            <input type="text" th:field="*{isbn}" class="form-control"  placeholder="Enter the ISBN" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <div th:replace="fragments/footer :: footer" />
+
+</div> <!-- /container -->
+
+</body>
+</html>
