@@ -8,7 +8,6 @@
 
 ## Core Codes that I used in this project
   1. Creat Order
-    ```
   public static OrderItem createOrderItem(Item item, int orderPrice, int
   count) {
   OrderItem orderItem = new OrderItem();
@@ -18,10 +17,10 @@
   item.removeStock(count);
   return orderItem;
   }
-  ```
+  
 
   2. Cancel Order
-    ```
+     
     public void cancel() {
         if (delivery.getStatus() == DeliveryStatus.COMP) {
             throw new IllegalStateException("You cannot cancel the item after it starts delivery.");
@@ -32,11 +31,12 @@
             orderItem.cancel();
         }
     }
-    ```
+    
 
   3. Checking Order Status
-    ```
-    if (orderSearch.getOrderStatus() != null) {
+
+     ```java
+     if (orderSearch.getOrderStatus() != null) {
     if (isFirstCondition) {
     jpql += " where";
     isFirstCondition = false;
@@ -45,13 +45,10 @@
     }
     jpql += " o.status = :status";
     }
-    ```
-  
+     ```
 
-
-
-
-## Image link
+ 
+## Image 
 |Feature|Description|
 |--|--|
 |Feature0|<img width="840" alt="Screenshot 2023-12-11 at 1 47 53 PM" src="https://github.com/devRyanChoi/Ryan-Store/assets/120599634/70a9e2dc-dfc5-46a4-be7f-f4d11ad21844" width="400"<br>Drwaing|
