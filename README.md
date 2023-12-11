@@ -28,7 +28,6 @@
         if (delivery.getStatus() == DeliveryStatus.COMP) {
             throw new IllegalStateException("You cannot cancel the item after it starts delivery.");
         }
-
         this.setStatus(OrderStatus.CANCEL);
         for (OrderItem orderItem : orderItems) {
             orderItem.cancel();
@@ -42,13 +41,13 @@
 
      ```java
      if (orderSearch.getOrderStatus() != null) {
-    if (isFirstCondition) {
-    jpql += " where";
-    isFirstCondition = false;
-    } else {
-    jpql += " and";
-    }
-    jpql += " o.status = :status";
+        if (isFirstCondition) {
+        jpql += " where";
+        isFirstCondition = false;
+        } else {
+        jpql += " and";
+        }
+        jpql += " o.status = :status";
     }
      ```
 
