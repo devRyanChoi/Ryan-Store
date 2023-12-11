@@ -1,9 +1,23 @@
 ## ❓ What is Ryan store?   
-- **Ryan - Store**  is a Back-end application built personally with  Spring Boot and HTML,CSS that allows users to add books users want to buy and purchase .
+- **Ryan - Store**  is a Back-end application built personally with  Spring Boot and HTML,CSS that allows users to add books users want to buy and purchase.
 
+
+## Business Codes that I used in this project
+CreatOrder
+```
+public static OrderItem createOrderItem(Item item, int orderPrice, int
+count) {
+OrderItem orderItem = new OrderItem();
+orderItem.setItem(item);
+orderItem.setOrderPrice(orderPrice);
+orderItem.setCount(count);
+item.removeStock(count);
+return orderItem;
+}
+```
 
 ## Features
-- User can sign up.
+- I used for ManyToMany in this project. But this is not good at Real Project. That is for practice.
 - User can add the book.
 - User can make the order with the book the user added. 
 
@@ -30,9 +44,3 @@
 - **mockito** 
 - **assertj**
 - **spring-test**
-  
-
-## Getting Started
-
-- Install all dependencies (using the `npm install` command).
-- Run the development web server using the `node express_server.js` command.
