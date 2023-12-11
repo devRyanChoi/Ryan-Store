@@ -8,20 +8,23 @@
 
 ## Core Codes that I used in this project
   1. Creat Order
-  public static OrderItem createOrderItem(Item item, int orderPrice, int
-  count) {
-  OrderItem orderItem = new OrderItem();
-  orderItem.setItem(item);
-  orderItem.setOrderPrice(orderPrice);
-  orderItem.setCount(count);
-  item.removeStock(count);
-  return orderItem;
-  }
+     ```java
+       public static OrderItem createOrderItem(Item item, int orderPrice, int
+          count) {
+          OrderItem orderItem = new OrderItem();
+          orderItem.setItem(item);
+          orderItem.setOrderPrice(orderPrice);
+          orderItem.setCount(count);
+          item.removeStock(count);
+          return orderItem;
+     }  
+     ```
+
   
 
   2. Cancel Order
-     
-    public void cancel() {
+     ```java
+        public void cancel() {
         if (delivery.getStatus() == DeliveryStatus.COMP) {
             throw new IllegalStateException("You cannot cancel the item after it starts delivery.");
         }
@@ -31,6 +34,8 @@
             orderItem.cancel();
         }
     }
+     ```
+
     
 
   3. Checking Order Status
